@@ -1,0 +1,204 @@
+:root {
+    --white: #e5e6d9;
+    --green: #8eac0d;
+    --red: #f4e02e;
+    --yellow: #f9e39e;
+    --purple: #0bb142;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--white);
+    display: grid;
+    min-height: 100vh;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.brand {
+    font-size: 1.5em;
+    padding: .7em .5em;
+    background: var(--red);
+    border-radius: 50%;
+}
+
+
+nav > ul > li {
+    list-style: none;
+    margin-right: 5px; 
+}
+
+.btn {
+    padding: .5em 2em;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--white);
+    text-transform: uppercase;
+    border: 1px solid rgba(0, 0, 0, 0);
+    transition: all 1s;
+}
+
+.jumbotron {
+    background-color: var(--purple);
+    background-image: url(../images/6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    min-height: 70vh;
+    padding: 10px 20px 10px 50px;
+}
+
+header > nav > ul > li > a:hover, .active {
+    border: 1px solid var(--white);
+    border-radius: .2rem;
+}
+
+main > div > h1, footer > section > h3 {
+    text-transform: capitalize;   
+}
+
+main > div > h1 > span {
+    color: var(--green);
+}
+
+main > div > p{
+    max-width: 100%;
+    line-height: 1.5em;
+    margin-bottom: 20px;
+}
+
+.buy-meal-btn {
+    border: 1px solid #fff;
+    color: var(--red);
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.buy-meal-btn:hover {
+    color: var(--white);
+    background-color: var(--red);
+}
+
+footer {
+    background-color: var(--yellow);
+    min-height: fit-content;
+    color: black;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+footer > nav > ul > li > a {
+    color: var(--purple);
+    transition: all .5s;
+}
+
+footer > nav > ul > li > a:hover {
+    color: #679127;
+    position: relative;
+    top: -10px;
+}
+
+.img-container {
+    min-width: 50%;
+    display: flex;
+}
+
+.img-container > img {
+    width: 50%;
+    border-radius: 50%;
+    box-shadow: 4px 10px 20px rgba(0, 0, 0, .7);
+    position: relative;
+    top: 50px;
+    display: block;
+}
+
+.jumbotron.short {
+    min-height: 20vh;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.card {
+    max-width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--green);
+    padding: 10px;
+    border-radius: .5em;
+}
+
+.card > .img-container > img {
+    width: 100px;
+    height: 100px;
+    top: 0;
+}
+
+main > div > .btns-container {
+    margin: 20px 0;
+}
+
+.btns-container > .btn{
+     margin: 5px;
+     color: var(--red);
+}
+
+.price {
+    background-color: var(--purple);
+}
+
+.color-green {
+    background-color: var(--green);
+    color: var(--white) !important;
+}
+
+.breakfast {
+    background-color: var(--red);
+} 
+
+.lunch {
+    background-color: var(--green);
+} 
+
+.dinner {
+    background-color: var(--purple);
+} 
+
+@media screen and (max-width:780px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    main > .img-container {
+        display: none;
+    }
+
+    header > nav > ul.collapse {
+        display: block;
+    }
+
+    .jumbotron {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+}
+
+
